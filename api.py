@@ -20,6 +20,10 @@ from scrapOlis import totalStationsInDict as respolis
 app = Flask(__name__)
 CORS(app)
 
+# Default route :)
+@app.route('/', methods=['GET'])
+def defaultResponse():
+    return 'This is a test'
 
 @app.route('/n1', methods=['GET'])
 def n1():
